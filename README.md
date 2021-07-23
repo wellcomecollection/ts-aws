@@ -21,7 +21,7 @@ You can do this in your tsconfig:
 }
 ```
 
-Then get ot writing your code
+Then get to writing your code
 ```TS
 import { getCreds } from "@weco/ts-aws"
 
