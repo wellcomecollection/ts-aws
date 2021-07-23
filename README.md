@@ -35,3 +35,7 @@ run()
 
 ```
 
+## Publishing
+
+When a merge makes it to `main`, and the version in the `package.json` has been changed, a publish will be automatically triggered.
+
