@@ -26,9 +26,9 @@ async function getCreds(name: AccountName, access: Access = "read_only") {
   try {
     const data = await client.send(command);
     const credentials = {
-      accessKeyId: data.Credentials!.AccessKeyId,
-      secretAccessKey: data.Credentials!.SecretAccessKey,
-      sessionToken: data.Credentials!.SessionToken,
+      accessKeyId: data.Credentials!.AccessKeyId!,
+      secretAccessKey: data.Credentials!.SecretAccessKey!,
+      sessionToken: data.Credentials!.SessionToken!,
     };
     return credentials;
   } catch (error) {

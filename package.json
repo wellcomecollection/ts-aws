@@ -1,10 +1,9 @@
 {
-  "version": "0.0.13",
+  "version": "0.0.14",
   "name": "@weco/ts-aws",
   "description": "A set of ts-node TypeScript helpers for interacting with Wellcome Collection's AWS infrastructure",
   "license": "MIT",
   "dependencies": {
-    "@aws-sdk/client-secrets-manager": "^3.22.0",
     "@aws-sdk/client-sts": "^3.22.0"
   },
   "scripts": {
