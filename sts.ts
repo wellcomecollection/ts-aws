@@ -1,11 +1,8 @@
-import { config, STS } from "aws-sdk";
-
-config.update({ region: "eu-west-1" });
-
-const sts = new STS({ apiVersion: "2011-06-15" });
+import { AssumeRoleCommand, STSClient } from "@aws-sdk/client-sts";
 
 type Access = "read_only" | "developer" | "admin";
 type AccountName = keyof typeof accounts;
+
 const accounts = {
   platform: { account: "760097843905" },
   workflow: { account: "299497370133" },
@@ -17,18 +14,26 @@ const accounts = {
   catalogue: { account: "756629837203" },
 };
 
+const client = new STSClient({ apiVersion: "2011-06-15", region: "eu-west-1" });
+
 async function getCreds(name: AccountName, access: Access = "read_only") {
-  const role = {
+  const params = {
     RoleArn: `arn:aws:iam::${accounts[name].account}:role/${name}-${access}`,
     RoleSessionName: `${name}-${access}`,
   };
-  const data = await sts.assumeRole(role).promise();
-  const credentials = {
-    accessKeyId: data.Credentials!.AccessKeyId,
-    secretAccessKey: data.Credentials!.SecretAccessKey,
-    sessionToken: data.Credentials!.SessionToken,
-  };
-  return credentials;
+  const command = new AssumeRoleCommand(params);
+
+  try {
+    const data = await client.send(command);
+    const credentials = {
+      accessKeyId: data.Credentials!.AccessKeyId,
+      secretAccessKey: data.Credentials!.SecretAccessKey,
+      sessionToken: data.Credentials!.SessionToken,
+    };
+    return credentials;
+  } catch (error) {
+    throw error;
+  }
 }
 
 export { getCreds };
