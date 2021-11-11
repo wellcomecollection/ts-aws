@@ -4,7 +4,7 @@ A set of ts-node TypeScript helpers for interacting with Wellcome Collection's A
 
 These aren't meant to be more generically useful outside of Wellcome Collection.
 
-## Installation
+## Installation
 
   yarn add @weco/ts-aws
 
