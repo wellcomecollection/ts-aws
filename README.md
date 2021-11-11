@@ -6,7 +6,7 @@ These aren't meant to be more generically useful outside of Wellcome Collection.
 
 ## Installation
 
-  yarn add @weco/ts-aws
+    yarn add @weco/ts-aws
 
 ## Usage
 If you are using this with [ts-node](https://github.com/TypeStrong/ts-node) you will need to configure it to not exclude this package as we don't compile to JS.
