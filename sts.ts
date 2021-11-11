@@ -1,7 +1,7 @@
 import { AssumeRoleCommand, STSClient } from "@aws-sdk/client-sts";
 
 type Access = "read_only" | "developer" | "admin";
-type AccountName = keyof typeof accounts;
+export type AccountName = keyof typeof accounts;
 
 const accounts = {
   platform: { account: "760097843905" },
