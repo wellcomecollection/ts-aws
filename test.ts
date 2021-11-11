@@ -1,7 +1,7 @@
-import { getCreds } from "./sts";
+import { getCreds } from './sts'
 
-async function run() {
-  const creds = await getCreds("platform", "developer");
+async function run () {
+  await getCreds('platform', 'developer')
 }
 
-run();
+run()
