@@ -8,20 +8,8 @@ These aren't meant to be more generically useful outside of Wellcome Collection.
 
     yarn add @weco/ts-aws
 
-## Usage
-If you are using this with [ts-node](https://github.com/TypeStrong/ts-node) you will need to configure it to not exclude this package as we don't compile to JS.
+## Example Usage
 
-You can do this in your tsconfig:
-```JSON
-{
-  "extends": "ts-node/node12/tsconfig.json",
-  "ts-node": {
-    "skipIgnore": true
-  }
-}
-```
-
-Then get to writing your code
 ```TS
 import { getCreds } from "@weco/ts-aws"
 
@@ -38,4 +26,3 @@ run()
 ## Publishing
 
 When a merge makes it to `main`, and the version in the `package.json` has been changed, a publish will be automatically triggered.
-
