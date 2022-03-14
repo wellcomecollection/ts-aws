@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "@weco/ts-aws",
   "description": "A set of ts-node TypeScript helpers for interacting with Wellcome Collection's AWS infrastructure",
   "license": "MIT",

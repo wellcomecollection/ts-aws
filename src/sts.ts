@@ -11,6 +11,7 @@ const accounts = {
   digitisation: { account: "404315009621" },
   reporting: { account: "269807742353" },
   catalogue: { account: "756629837203" },
+  identity: { account: "770700576653" },
 };
 
 export type AccountName = keyof typeof accounts;
