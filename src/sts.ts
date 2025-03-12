@@ -14,10 +14,16 @@ const accounts = {
   identity: { account: "770700576653" },
 };
 
+/**
+ * @deprecated Do not use this package moving forward.
+ */
 export type AccountName = keyof typeof accounts;
 
 const client = new STSClient({ apiVersion: "2011-06-15", region: "eu-west-1" });
 
+/**
+ * @deprecated Do not use this package moving forward.
+ */
 async function getCreds(name: AccountName, access: Access = "read_only") {
   const params = {
     RoleArn: `arn:aws:iam::${accounts[name].account}:role/${name}-${access}`,
