@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "@weco/ts-aws",
   "description": "A set of ts-node TypeScript helpers for interacting with Wellcome Collection's AWS infrastructure",
   "license": "MIT",
@@ -17,8 +17,8 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1",
-    "@types/node": "^16.4.1",
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/node": "20.2.3",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
     "eslint": "^7.32.0",

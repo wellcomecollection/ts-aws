@@ -7,6 +7,9 @@ import { getCreds } from "./sts";
 type Awaited<T> = T extends PromiseLike<infer U> ? U : T;
 type Credentials = Awaited<ReturnType<typeof getCreds>>;
 
+/**
+ * @deprecated Do not use this package moving forward.
+ */
 export async function setEnvsFromSecrets(
   secrets: Record<string, string>,
   credentials?: Credentials
