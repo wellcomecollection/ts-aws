@@ -1,3 +1,6 @@
+> [!Note]
+> Following https://github.com/wellcomecollection/platform/issues/6416, this library is now fully deprecated and not in active use.
+
 # @weco/ts-aws
 
 A set of ts-node TypeScript helpers for interacting with Wellcome Collection's AWS infrastructure
